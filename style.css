@@ -19,10 +19,23 @@ body {
   background-color: rgb(63, 172, 172);
 }
 
+#display-todos ul {
+list-style-type: none;
+}
+
 #app {
   width: 750px;
   height: 600px;
   border: 2px solid #212121;
   padding: 20px;
   background-color: aliceblue;
+  border-radius: 8px;
+}
+
+
+.progress-bar {
+  width: 100px;
+  height: 20px;
+  background-color: red;
+  color: black;
 }
