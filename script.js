@@ -2,4 +2,4 @@
 const showDate = document.querySelector(".show-date");
 
 
- showDate.innerHTML = `Date to do was created ${dayjs().format()}`
+ showDate.innerHTML = `Date to do was created ${dayjs().format("dddd, DD MMMM YYYY")}`
