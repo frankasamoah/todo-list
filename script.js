@@ -14,7 +14,7 @@ const displayTodos = document.querySelector('#display-todos');
 const incomingList = document.querySelector('.incoming-list')
 
 
-// const li = document.createElement('li');
+const deleteButton = document.querySelector('.delete-button')
 
 
 
@@ -24,7 +24,7 @@ const incomingList = document.querySelector('.incoming-list')
 
 
 
-const todoModal = () => {
+const addToDo = () => {
   // adding event listener to prevent the forms behavior of submitting anytime we load page
     todoForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -42,10 +42,13 @@ const todoModal = () => {
 
 };
 
-addButton.addEventListener("click", todoModal)
+addButton.addEventListener("click", addToDo)
 
+const deleteToDo = () => {
+  incomingList.removeChild(incomingList.firstElementChild)
+}
 
-
+deleteButton.addEventListener('click', deleteToDo)
 
 // const showDate = document.querySelector(".show-date");
 
