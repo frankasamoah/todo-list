@@ -30,20 +30,37 @@ body {
   list-style-type: none;
 }
 
+
+
+/* so that they're not targets for pointer events so that the classes given become priority*/
+.fa-pencil, .fa-xmark, .fa-square-check {
+  pointer-events: none;
+}
+
 .todo {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  color: aqua;
   background: #ffffff;
   margin: .5rem;
-  color: #000000;
+  border: 1px solid yellow;
+  padding: 0.5rem 1.5rem;
   font-size: 1.5rem;
   transition: all 0.5s ease;
 }
 
-.todo li {
-  flex: 1;
+.todo * + * {
+  margin-left: 1.5rem;
 }
+
+.todo button {
+  border: none;
+  color: aqua;
+  background: #ffffff;
+}
+
+
 
 #app {
   display: grid;
@@ -59,9 +76,38 @@ body {
 }
 
 
-.progress-bar {
-  width: 100px;
-  height: 20px;
-  background-color: red;
-  color: black;
+.progress{
+  background-color: lightgray;
+  width: 300px;
+  height: 30px;
+  border-radius: 20px;
+  
+  /* color: black; */
+}
+
+.progress-done {
+display: flex;
+align-items: center;
+justify-content: center;
+background-image: repeating-linear-gradient(to left, #0546e0, #1172f9, #4892f9);
+box-shadow: 0 5px 5px -6px #0546e0, 0 3px 7px #1172f9;
+border-radius: 10px;
+height: 100%;
+width: 0;
+color: #ffffff;
+transition: 1s ease 0.3s;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.column-display {
+  display: flex;
+  flex-direction: column;
+};
+
+.input-disappear {
+  display: none;
 }
