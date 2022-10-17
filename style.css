@@ -12,20 +12,46 @@ html {
 
 
 body {
-  display: grid;
-  place-content: center;
+  /* display: grid;
+  place-content: center; */
   /* place-items: center; */
-  height: 100vh;
+  /* height: 100vh; */
   background-color: rgb(63, 172, 172);
 }
 
-#display-todos ul {
-list-style-type: none;
+#display-todos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 40%;
+  list-style-type: none;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  margin: .5rem;
+  color: #000000;
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
 }
 
 #app {
-  width: 750px;
-  height: 600px;
+  display: grid;
+  /* place-content: center; */
+  place-items: center;
+  width: 85%;
+  margin: auto;
+  margin-top: 2rem;
   border: 2px solid #212121;
   padding: 20px;
   background-color: aliceblue;
